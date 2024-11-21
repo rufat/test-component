@@ -1,5 +1,6 @@
 type IOddButtonProps = {
-    children: React.ReactNode, onClick: () => void
+    children: React.ReactNode,
+    onClick: () => void
 } & React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
 
 const style = {

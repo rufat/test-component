@@ -1,6 +1,10 @@
 import dummyMatches from '../data/dummyMatches.json';
 
-export default function AllMatches({ children }: { children: (match: never) => React.ReactNode }) {
+type IAllMatchesProps = {
+    children: (match: never) => React.ReactNode
+}
+
+export default function AllMatches({ children }: IAllMatchesProps) {
     return (
         <div>
             <h1>Maçlar</h1>

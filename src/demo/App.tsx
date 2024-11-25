@@ -4,6 +4,22 @@ import AllMatches from '../components/AllMatches'
 import OddButton from '../components/OddButton'
 import methods from '../methods'
 
+const styles = {
+  matchItem: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+  matchTitle: {
+    width: 500,
+    textAlign: "start"
+  },
+  oddButtonContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: '10px',
+  }
+}
+
 function App() {
   return (
     <>
@@ -11,19 +27,9 @@ function App() {
         {
           (match: any) => {
             return (
-              <div key={match.id} style={{
-                display: 'flex',
-                alignItems: 'center',
-              }}>
-                <h4 style={{
-                  width: 500,
-                  textAlign: "start"
-                }}>{match.name}</h4>
-                <div style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  gap: '10px',
-                }}>
+              <div key={match.id} style={styles.matchItem}>
+                <h4 style={styles.matchTitle as never}>{match.name}</h4>
+                <div style={styles.oddButtonContainer as never}>
                   {
                     match.odds.map((odd: any) => {
                       return (
@@ -36,8 +42,7 @@ function App() {
                 </div>
               </div>
             )
-          }
-        }
+          }}
       </AllMatches>
       <a href="https://github.com/rufat/test-component/blob/main/src/demo/App.tsx" target="_blank">Github repo</a>
     </>

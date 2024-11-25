@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import './App.css'
-import AllMatches from './components/AllMatches'
-import OddButton from './components/OddButton'
-import methods from './methods'
+import AllMatches from '../components/AllMatches'
+import OddButton from '../components/OddButton'
+import methods from '../methods'
 
 function App() {
   return (

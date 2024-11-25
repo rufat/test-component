@@ -6,13 +6,13 @@ type IAllMatchesProps = {
     className?: string
 }
 
-export default function AllMatches({ children, style, className }: IAllMatchesProps) {
+export default function AllMatches(props: IAllMatchesProps) {
     return (
-        <div style={style} className={className}>
+        <div {...props} style={props?.style} className={props?.className}>
             <h1>Maçlar</h1>
             {
                 dummyMatches.map((match) => {
-                    return children(match as never)
+                    return props?.children(match as never)
                 })
             }
         </div>

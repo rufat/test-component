@@ -39,6 +39,7 @@ function App() {
           }
         }
       </AllMatches>
+      <a href="https://github.com/rufat/test-component/blob/main/src/demo/App.tsx" target="_blank">Github repo</a>
     </>
   )
 }
